@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Please catch Your Student details</h3>
+    <div class="card-container">
+    <div th:each="student : ${detailsList}" class="card" style="width: 18rem;">
+        <h5 class="card-header">Student</h5>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" th:text="${'Name: ' + student.Name}"></li>
+            <li class="list-group-item" th:text="${'Course: ' + student.Course}"></li>
+            <li class="list-group-item" th:text="${'Joining_date: ' + student.Joining_date}"></li>
+            <li class="list-group-item" th:text="${'Address: ' + student.Address}"></li>
+        </ul>
+        <div class="card-footer">
+            Card footer
+        </div>
+        <div class="card-body">
+            <a href="/home" class="btn btn-primary">Home</a>
+        </div>
+    </div>
+    </div>
+    
+</body>
+</html>
